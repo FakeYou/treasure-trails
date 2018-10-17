@@ -1,0 +1,45 @@
+{
+  "name": "clues",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --out-dir docs --detailed-report",
+    "crawl": "node scripts/crawl.js",
+    "spritesheet": "node scripts/spritesheet.js",
+    "process": "node scripts/process.js"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/runtime-corejs2": "^7.1.2",
+    "axios": "^0.18.0",
+    "chalk": "^2.4.1",
+    "cli-progress": "^2.1.0",
+    "fs-extra": "^7.0.0",
+    "immer": "^1.7.2",
+    "lodash": "^4.17.11",
+    "nedb": "^1.8.0",
+    "parcel-bundler": "^1.10.1",
+    "query-string": "^6.2.0",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": ">=16.0.0",
+    "react-virtualized": "^9.20.1",
+    "sharp": "^0.20.8",
+    "spectre.css": "^0.5.3",
+    "styled-components": "^3.4.9",
+    "unstated": "^2.1.1",
+    "weighted-random": "^0.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-syntax-optional-chaining": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "prettier": "^1.14.3",
+    "prettier-eslint": "^8.8.2",
+    "sass": "^1.14.2"
+  }
+}
