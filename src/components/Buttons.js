@@ -7,10 +7,10 @@ const Buttons = () => (
 	<Subscribe to={[Store]}>
 		{store => (
 			<Fragment>
-				<h3>
+				<h4>
 					Opened {store.state.clues.length} {store.state.difficulty}{' '}
 					{store.state.clues.length === 1 ? 'clue' : 'clues'}
-				</h3>
+				</h4>
 				<div class="form-group">
 					<button
 						className="btn btn-primary mr-1"
