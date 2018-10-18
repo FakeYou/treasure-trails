@@ -11,7 +11,7 @@ const Buttons = () => (
 					Opened {store.state.clues.length} {store.state.difficulty}{' '}
 					{store.state.clues.length === 1 ? 'clue' : 'clues'}
 				</h4>
-				<div class="form-group">
+				<div className="form-group">
 					<button
 						className="btn btn-primary mr-1"
 						onClick={() => store.openCasket()}
@@ -26,7 +26,7 @@ const Buttons = () => (
 						{store.state.isOpening ? 'Stop' : 'Auto-open'}
 					</button>
 				</div>
-				<div class="form-group">
+				<div className="form-group">
 					<select
 						className="form-select"
 						value={store.state.difficulty}

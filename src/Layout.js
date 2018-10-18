@@ -7,7 +7,7 @@ import Clues from './components/Clues';
 
 const Screen = styled.div`
 	display: grid;
-	grid-template-columns: minmax(323px, 1fr) 0.6fr;
+	grid-template-columns: minmax(323px, 1fr) 0.63fr;
 	grid-gap: 1px;
 	grid-template-areas: 'clues items';
 	max-width: 1200px;
@@ -33,6 +33,9 @@ const Layout = () => (
 		<Column>
 			<Buttons />
 			<Items />
+			<p className="mt-2">
+				<a href="https://github.com/fakeyou/treasure-trails">Github repo</a>
+			</p>
 		</Column>
 		<Content>
 			<Clues />

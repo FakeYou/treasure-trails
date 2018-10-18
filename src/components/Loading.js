@@ -20,9 +20,9 @@ const Container = styled.div`
 `;
 
 const Spinner = styled.div`
-	width: 20px;
-	height: 20px;
-	border: 5px solid #c53e37;
+	width: 16px;
+	height: 16px;
+	border: 3px solid #c53e37;
 	border-radius: 20px;
 	border-top-color: #fff;
 	animation: ${spinning} 0.75s linear infinite;

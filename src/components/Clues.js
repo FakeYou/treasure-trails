@@ -46,7 +46,7 @@ const Clues = () => (
 	<Subscribe to={[Store]}>
 		{store => (
 			<WindowScroller>
-				{({ height, isScrolling, onChildScroll, scrollTop }) => (
+				{({ height, isScrolling, scrollTop }) => (
 					<div>
 						{store.state.clues.length > 0 && <LatestClue {...store.state.clues[0]} />}
 						<CluesList
@@ -54,7 +54,6 @@ const Clues = () => (
 							autoHeight
 							height={height + 400}
 							isScrolling={isScrolling}
-							onScroll={onChildScroll}
 							rowCount={Math.max(store.state.clues.length - 1, 0)}
 							rowHeight={306}
 							rowRenderer={({ key, index, style }) => (
