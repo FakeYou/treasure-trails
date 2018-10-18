@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Subscribe } from 'unstated';
 import styled from 'styled-components';
 
-import Store, { DIFFICULTY } from '../Store';
+import Store from '../Store';
 import Item from './Item';
 import Loading from './Loading';
 
