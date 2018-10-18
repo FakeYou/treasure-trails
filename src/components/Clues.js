@@ -6,6 +6,7 @@ import styled, { keyframes } from 'styled-components';
 
 import Store from '../Store';
 import Clue from './Clue';
+import Loading from './Loading';
 
 const enterClue = keyframes`
 	from {

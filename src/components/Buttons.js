@@ -15,13 +15,14 @@ const Buttons = () => (
 					<button
 						className="btn btn-primary mr-1"
 						onClick={() => store.openCasket()}
-						disabled={store.state.isOpening}
+						disabled={store.state.isLoading || store.state.isOpening}
 					>
 						Open single casket
 					</button>
 					<button
 						className="btn btn-primary mr-1"
 						onClick={() => (store.state.isOpening ? store.stop() : store.start())}
+						disabled={store.state.isLoading}
 					>
 						{store.state.isOpening ? 'Stop' : 'Auto-open'}
 					</button>
@@ -32,6 +33,7 @@ const Buttons = () => (
 						value={store.state.difficulty}
 						onChange={e => store.setDifficulty(e.target.value)}
 						placeholder="Difficulty"
+						disabled={store.state.isLoading}
 					>
 						<option value={DIFFICULTY.EASY}>Easy clues</option>
 						<option value={DIFFICULTY.MEDIUM}>Medium clues</option>

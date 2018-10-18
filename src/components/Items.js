@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Store, { DIFFICULTY } from '../Store';
 import Item from './Item';
+import Loading from './Loading';
 
 import highlight from '../assets/highlight.png';
 
@@ -27,19 +28,27 @@ const Items = () => (
 	<Subscribe to={[Store]}>
 		{store => (
 			<Container>
-				{store.getItems(store.state.difficulty).map(item => (
-					<Wrapper
-						key={item.id}
-						onClick={() => store.toggleWishlist(item.id)}
-						highlight={store.state.wishlist.includes(item.id)}
-						found={!!store.state.total[item.id]}
-					>
-						<Item
-							{...item}
-							amount={store.state.total[item.id] || (store.state.wishlist.includes(item.id) && 0)}
-						/>
-					</Wrapper>
-				))}
+				{store.state.isLoading ? (
+					<Loading />
+				) : (
+					<Fragment>
+						{store.getItems(store.state.difficulty).map(item => (
+							<Wrapper
+								key={item.id}
+								onClick={() => store.toggleWishlist(item.id)}
+								highlight={store.state.wishlist.includes(item.id)}
+								found={!!store.state.total[item.id]}
+							>
+								<Item
+									{...item}
+									amount={
+										store.state.total[item.id] || (store.state.wishlist.includes(item.id) && 0)
+									}
+								/>
+							</Wrapper>
+						))}
+					</Fragment>
+				)}
 			</Container>
 		)}
 	</Subscribe>

@@ -13,8 +13,7 @@ const spinning = keyframes`
 
 const Container = styled.div`
 	display: flex;
-	height: 100vh;
-	width: 100vw;
+	flex: 1;
 	align-items: center;
 	justify-content: center;
 `;
@@ -27,8 +26,6 @@ const Spinner = styled.div`
 	border-top-color: #fff;
 	animation: ${spinning} 0.75s linear infinite;
 `;
-
-console.log(spinning);
 
 const Loading = () => (
 	<Container>
