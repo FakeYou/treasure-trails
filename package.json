@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --out-dir docs --detailed-report --public-url ./treasure-trails/",
+    "build": "parcel build index.html --out-dir docs --detailed-report --public-url ./",
     "crawl": "node scripts/crawl.js",
     "spritesheet": "node scripts/spritesheet.js",
     "process": "node scripts/process.js"
