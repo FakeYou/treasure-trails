@@ -34,7 +34,13 @@ const Layout = () => (
 			<Buttons />
 			<Items />
 			<p className="mt-2">
-				<a href="https://github.com/fakeyou/treasure-trails">Github repo</a>
+				<a
+					href="https://github.com/fakeyou/treasure-trails"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					Github repo
+				</a>
 			</p>
 		</Column>
 		<Content>
