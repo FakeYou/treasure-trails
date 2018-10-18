@@ -16,11 +16,12 @@ const Sprite = styled.div`
 	position: relative;
 	background: url(${spritesheet});
 	image-rendering: pixelated;
-	width: ${WIDTH};
-	height: ${HEIGHT};
+	width: ${WIDTH}px;
+	height: ${HEIGHT}px;
 `;
 
 const Quantity = styled(Amount)`
+	display: flex;
 	position: absolute;
 	left: 1px;
 	top: 0px;

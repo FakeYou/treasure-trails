@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
 import characters from '../assets/characters.png';
+import { relative } from 'path';
 
 const CHARS = {
 	'1': { left: 0, width: 4 },
@@ -22,7 +23,7 @@ const Char = styled.span`
 	display: inline-block;
 	background: url(${characters});
 	image-rendering: pixelated;
-	height: 9;
+	height: 9px;
 `;
 
 const Amount = ({ children, style, className }) => {
@@ -40,18 +41,21 @@ const Amount = ({ children, style, className }) => {
 	}
 
 	return (
-		<span style={style} className={className}>
+		<div style={style} className={className}>
 			{string.split('').map((char, i) => (
 				<Char
 					key={i}
 					style={{
-						backgroundPositionX: -CHARS[char].left,
-						backgroundPositionY: -y,
-						width: CHARS[char].width
+						position: 'relative',
+						top: 0,
+						left: 0,
+						backgroundPositionX: `${-CHARS[char].left}px`,
+						backgroundPositionY: `${-y}px`,
+						width: `${CHARS[char].width}px`
 					}}
 				/>
 			))}
-		</span>
+		</div>
 	);
 };
 
